@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+    void sort(int num[],int size){
+    for (int i=0;i<size-1;i++){
+        for (int j=0;j<size-1;j++){
+          if(num[j]>num[j+1]){
+            int temp=num[j];
+            num[j]=num[j+1];
+            num[j+1]=temp;
+          }
+        }
+    }
+
+    }
+void print_num(int num[], int size){
+    for (int i=0;i<size;i++){
+        printf("%d\t",num[i]);
+    }
+}
+
+
 int main()
 {
     /*float physics_assignment, physics_coursework, physics_midterm, physics_endterm;
@@ -57,7 +76,7 @@ int main()
     float overall_avg = (avg_physics + avg_chemistry + avg_math) / 3;
     printf("\nOverall average marks: %.2f\n", overall_avg);*/
 
-int n, x;
+/*int n, x;
 printf("Enter the number of domestic animals: ");
 scanf_s("%d", &n);
 
@@ -82,7 +101,7 @@ for(int i=0; i<x; i++){
         printf("%d. %s\n", n+i+1, wild_animals[i]);
     }*/
     //merge
-    int size=n+x;
+   /* int size=n+x;
     char merged_array[size][50];
     for(int i=0; i<size; i++){
         strcpy(merged_array[i],domestic_animals[i]);
@@ -92,6 +111,16 @@ for(int i=0; i<x; i++){
     }
     for(int i=0; i<size; i++){
         printf("%s ", merged_array[i]);
+    }*/
+    int size;
+    int num[size];
+    printf("Enter the number of elements\n");
+    scanf_s("%d",&size);
+    printf("Enter the numbers\n");
+    for (int i=0;i<size;i++){
+    scanf_s("%d",&num[i]);
     }
+    sort(num,size);
+    print_num(num,size);
     return 0;
 }
