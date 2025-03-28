@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-    void sort(int num[],int size){
+    /*void sort(int num[],int size){
     for (int i=0;i<size-1;i++){
         for (int j=0;j<size-1;j++){
           if(num[j]>num[j+1]){
@@ -17,11 +17,46 @@ void print_num(int num[], int size){
     for (int i=0;i<size;i++){
         printf("%d\t",num[i]);
     }
-}
+}*/
 
 
 int main()
 {
+    double ave; // To store the average of marks
+    printf("subject number,\n 1: Maths, 2: Physics, 3: Chemistry,\n\n");
+
+    int avearray[3][4]; // Array to store marks for 4 tasks and 3 subjects
+
+    // Input marks for each task and subject
+    for (int i = 0; i < 3; ++i) {
+        printf("Enter marks for subject %d in task, 1. assignment, 2. test, 3. mid term, 4. end of term\n", i + 1);
+        for (int j = 0; j < 4; ++j) {
+            printf("Marks for task %d: ", j + 1);
+           scanf_s("%d", &avearray[i][j]);
+           if(avearray[i][j]>100 || avearray[i][j]<0){
+            printf("invalid mark\n");
+            break;
+           }else{}
+        }
+    }
+
+    // Display the averages for each task
+    for (int i = 0; i < 3; ++i) {
+        ave = (avearray[i][0] + avearray[i][1] + avearray[i][2]) / 3.0;
+        printf("The average for subject %d is %.2lf\n", i + 1, ave);
+    }
+
+    printf("\nAll marks:\n");
+
+    // Output all marks for each task
+    for (int i = 0; i < 3; ++i) {
+        printf("Marks for subject %d:\n", i + 1);
+        for (int j = 0; j < 4; ++j) {
+            printf("Subject %d: %d\n", j + 1, avearray[i][j]);
+        }
+    }
+
+
     /*float physics_assignment, physics_coursework, physics_midterm, physics_endterm;
     float chemistry_assignment, chemistry_coursework, chemistry_midterm, chemistry_endterm;
     float math_assignment, math_coursework, math_midterm, math_endterm;
@@ -112,7 +147,7 @@ for(int i=0; i<x; i++){
     for(int i=0; i<size; i++){
         printf("%s ", merged_array[i]);
     }*/
-    int size;
+    /*int size;
     int num[size];
     printf("Enter the number of elements\n");
     scanf_s("%d",&size);
@@ -121,6 +156,6 @@ for(int i=0; i<x; i++){
     scanf_s("%d",&num[i]);
     }
     sort(num,size);
-    print_num(num,size);
+    print_num(num,size);*/
     return 0;
 }
