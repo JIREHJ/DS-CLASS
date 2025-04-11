@@ -35,7 +35,9 @@ int main()
            scanf_s("%d", &avearray[i][j]);
            if(avearray[i][j]>100 || avearray[i][j]<0){
             printf("invalid mark\n");
-            break;
+            printf("Re-enter the marks, between 0 and 100\n");
+            scanf_s("%d", &avearray[i][j]);
+
            }else{}
         }
     }
@@ -111,6 +113,7 @@ int main()
     float overall_avg = (avg_physics + avg_chemistry + avg_math) / 3;
     printf("\nOverall average marks: %.2f\n", overall_avg);*/
 
+    //merging task
 /*int n, x;
 printf("Enter the number of domestic animals: ");
 scanf_s("%d", &n);
@@ -128,25 +131,25 @@ for(int i=0; i<x; i++){
     printf("Enter the domestic animal %d:", i+1);
     scanf_s("%s", wild_animals[i]);
 }
-   /* printf("All the animals:\n ");
+    printf("All the animals:\n ");
     for(int i=0; i<n; i++){
         printf("%d. %s\n", i+1, domestic_animals[i]);
     }
     for(int i=0; i<x; i++){
         printf("%d. %s\n", n+i+1, wild_animals[i]);
-    }*/
+    }
     //merge
-   /* int size=n+x;
+    int size=n+x;
     char merged_array[size][50];
     for(int i=0; i<size; i++){
-        strcpy(merged_array[i],domestic_animals[i]);
+        strcpy(merged_array[i],domestic_animals[i]);//copying elements in domestic animals array the the merged array
     }
      for(int i=0; i<size; i++){
-        strcpy(merged_array[i+n],wild_animals[i]);
+        strcpy(merged_array[i+n],wild_animals[i]);//copying elements in wild animals array the the merged array
     }
     for(int i=0; i<size; i++){
-        printf("%s ", merged_array[i]);
-    }*/
+        printf("%s ", merged_array[i]);//displaying elements in merged array.
+    }
     /*int size;
     int num[size];
     printf("Enter the number of elements\n");

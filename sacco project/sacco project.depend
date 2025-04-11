@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1744168450 source:c:\users\jonathan jireh\desktop\my c code\e\sacco project\main.cpp
+	<iostream>
+	<queue>
+	<stack>
+	<unordered_map>
+	<list>
+
