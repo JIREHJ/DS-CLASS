@@ -11,6 +11,16 @@ class SACCO {
     unordered_map<int, list<string>> history; // Account ID -> Transaction History
 
 public:
+    //Account Creation
+    void creat_acct(){
+        string un;
+        int pn;
+        cout<< "add account\n";
+        cout<< "Enter user name\t";
+        cin>>un;
+        cout<< "create pin\t";
+        cin>>pn;
+    }
     // Deposit Function
     void deposit(int accountID) {
         double amount;
@@ -21,9 +31,9 @@ public:
             cout << "Invalid deposit amount.\n";
             return;
         }
-        accounts[accountID] += amount;
-        history[accountID].push_back("Deposited: " + to_string(amount));
-        cout << "Deposit successful. New Balance: " << accounts[accountID] << endl;
+        //accounts[accountID] += amount;
+        //history[accountID].push_back("Deposited: " + to_string(amount));
+        //cout << "Deposit successful. New Balance: " << accounts[accountID] << endl;
     }
 
     // Withdrawal Function
@@ -60,9 +70,10 @@ int main() {
     SACCO sacco;
     int accountID = 1; // Using a single account ID for simplicity
     int choice;
+    sacco.creat_acct();
 
     do {
-        cout << "\nSACCO Management System\n";
+        cout << "\n=====SACCO Management System====\n";
         cout << "1. Deposit\n";
         cout << "2. Withdraw\n";
         cout << "3. View Statement\n";
